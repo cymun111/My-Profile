@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-image: url("/images/codingBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div
+h1 {
+  color: red;
+}

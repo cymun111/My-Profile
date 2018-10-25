@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myWebsite">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+    <base href="/">
+  </head>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <button type="submit" class="btn btn-dark btn-lg"><a class="text-secondary" ui-sref="home">Home</a></button></div>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-dark btn-lg"><a class="text-secondary" ui-sref="about">About Me</a></button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-dark btn-lg"><a class="text-secondary" ui-sref="contact">Contact Me</a></button>
+        </li>
+      </ul>
+    </nav>
+  <body>
+
+<div>
+  <ui-view></ui-view>
+</div>
+<script src="bundle.js"></script>
+  </body>
+</html>

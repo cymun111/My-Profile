@@ -48979,7 +48979,7 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, "html, body {\n    height: 100%;\n\n    /* Center and scale the image nicely */\n    background-image: url(\"/images/codingBackground.jpg\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\ndiv\nh1 {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "html, body {\n    height: 100%;\n\n    /* Center and scale the image nicely */\n    background-image: url(\"/images/MainBackgroundFinal.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n", ""]);
 
 // exports
 

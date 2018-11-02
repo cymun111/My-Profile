@@ -2,9 +2,11 @@ import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
 import './css/styles.css';
 import {HomeController, ContactController, AboutController, NotFoundController} from './controllers/controllers';
+import {ContactService} from './services/services';
 
 
 angular.module('myWebsite', [uirouter])
+.service('ContactService', ContactService)
 .controller('HomeController', HomeController)
 .controller('ContactController', ContactController)
 .controller('AboutController', AboutController)

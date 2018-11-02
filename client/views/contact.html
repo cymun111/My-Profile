@@ -1,1 +1,30 @@
 <h1>This is the contact page.</h1>
+
+<div>
+  <h3>Email Us</h3>
+  <form>
+    <p>
+      <label>Name</label>
+      <input type="text" ng-model="Ccontroller.contact.name">
+    </p>
+    <p>
+      <label>Company</label>
+      <input type="text" ng-model="Ccontroller.contact.company">
+    </p>
+    <p>
+      <label>Email Address</label>
+      <input type="email" ng-model="Ccontroller.contact.email">
+    </p>
+    <p>
+      <label>Phone Number</label>
+      <input type="text" ng-model="Ccontroller.contact.phone">
+    </p>
+    <p class="full">
+      <label>Message</label>
+      <textarea ng-model="Ccontroller.contact.message" rows="5"></textarea>
+    </p>
+    <p class="full">
+      <button ng-click="Ccontroller.sendContactEmail()">Submit</button>
+    </p>
+  </form>
+</div>

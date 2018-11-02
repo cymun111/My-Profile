@@ -9803,9 +9803,11 @@ __webpack_require__(92);
 
 var _controllers = __webpack_require__(97);
 
+var _services = __webpack_require__(98);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_angular2.default.module('myWebsite', [_angularjs2.default]).controller('HomeController', _controllers.HomeController).controller('ContactController', _controllers.ContactController).controller('AboutController', _controllers.AboutController).controller('NotFoundController', _controllers.NotFoundController).config(routing);
+_angular2.default.module('myWebsite', [_angularjs2.default]).service('ContactService', _services.ContactService).controller('HomeController', _controllers.HomeController).controller('ContactController', _controllers.ContactController).controller('AboutController', _controllers.AboutController).controller('NotFoundController', _controllers.NotFoundController).config(routing);
 
 routing.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 function routing($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -49578,6 +49580,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var HomeController = exports.HomeController = function HomeController() {
@@ -49588,13 +49592,61 @@ var AboutController = exports.AboutController = function AboutController() {
   _classCallCheck(this, AboutController);
 };
 
-var ContactController = exports.ContactController = function ContactController() {
-  _classCallCheck(this, ContactController);
-};
+var ContactController = exports.ContactController = function () {
+  function ContactController(ContactService) {
+    _classCallCheck(this, ContactController);
+
+    this.ContactService = ContactService;
+  }
+
+  _createClass(ContactController, [{
+    key: "sendContactEmail",
+    value: function sendContactEmail() {
+      var contact = JSON.stringify(this.contact);
+      //console.log(contact);
+      this.ContactService.sendEmail(contact);
+    }
+  }]);
+
+  return ContactController;
+}();
 
 var NotFoundController = exports.NotFoundController = function NotFoundController() {
   _classCallCheck(this, NotFoundController);
 };
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ContactService = exports.ContactService = function () {
+  function ContactService($http) {
+    _classCallCheck(this, ContactService);
+
+    this.$http = $http;
+  }
+
+  _createClass(ContactService, [{
+    key: 'sendEmail',
+    value: function sendEmail(contact) {
+      console.log(contact);
+      this.$http.post('/api/contact', contact, { headers: { 'Content-Type': 'application/json' } });
+    }
+  }]);
+
+  return ContactService;
+}();
 
 /***/ })
 /******/ ]);

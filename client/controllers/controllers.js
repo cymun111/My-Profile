@@ -11,8 +11,14 @@ export class AboutController{
 }
 
 export class ContactController{
-  constructor(){
+  constructor(ContactService){
+    this.ContactService = ContactService;
 
+  }
+  sendContactEmail(){
+    let contact = JSON.stringify(this.contact);
+    //console.log(contact);
+    this.ContactService.sendEmail(contact)
   }
 }
 

@@ -8,10 +8,10 @@ router.post('/contact', (req, res) => {
   <p>You have a new Contact Request</p>
   <h3>Contact Details</h3>
   <ul>
-  <li>Name:${req.body.name}</li
-  <li>Company:${req.body.company}</li>
-  <li>Email:${req.body.email}</li>
-  <li>Phone:${req.body.phone}</li>
+  <li>Name: ${req.body.name}</li
+  <li>Company: ${req.body.company}</li>
+  <li>Email: ${req.body.email}</li>
+  <li>Phone: ${req.body.phone}</li>
   </ul>
   <h3>Message</h3>
   <p>${req.body.message}</p>
@@ -19,12 +19,15 @@ router.post('/contact', (req, res) => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: 'Smtp.gmail.com',
-        port: 465,
+        service: 'gmail',
+        port: 25,
         secure: true, // true for 465, false for other ports
         auth: {
             user: 'kenyon.westbrook@gmail.com', // generated ethereal user
             pass: 'Im11-11gone' // generated ethereal password
+        },
+        tls: {
+          rejectUnauthorized: false
         }
     });
 

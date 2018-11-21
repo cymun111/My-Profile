@@ -7,3 +7,172 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/*Experience HUB*/
+div.containerE {
+    height: 250px;
+    width: 250px;
+    background-image: radial-gradient(#0077b3 50%, cyan, white);
+    border-radius: 50%;
+    float: right;
+    margin-top: 20%;
+    margin-right: 5%;
+    position: relative;
+    transition: margin-right ease-in;
+   }
+div.containerE h2 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+div.containerE h1 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+/*HTML Experience*/
+div.containerHTML {
+    height: 90px;
+    width: 90px;
+    background-image: radial-gradient(#0077b3 50%, cyan, white);
+    border-radius: 50%;
+    right: 5%;
+    margin-top: 10%;
+    position: absolute;
+    transition: width 2s, height 2s;
+   }
+div.containerHTML:hover{
+    height: 135px;
+    width: 135px;
+   }
+div.containerHTML:hover > div.containerE{
+   background-color: red;
+   margin-right: 10%;
+   }
+div.containerHTML h2 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: .0;
+    transition: opacity 0s ease-in-out 0s;
+   }
+div.containerHTML:hover h2{
+  opacity: 1;
+  top: 60%;
+  transition:opacity 3.5s ease-in;
+}
+div.containerHTML h1 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+  }
+  div.containerHTML:hover h1{
+    top: 44%;
+  }
+
+/*CSS Experience*/
+div.containerCSS {
+    height: 90px;
+    width: 90px;
+    background-image: radial-gradient(#0077b3 50%, cyan, white);
+    border-radius: 50%;
+    float: right;
+    margin-top: 18%;
+    position: relative;
+    transition: width 2s, height 2s;
+   }
+div.containerCSS:hover {
+    height: 135px;
+    width: 135px;
+   }
+div.containerCSS h2 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: .0;
+    transition: opacity 0s ease-in-out 0s;
+   }
+div.containerCSS:hover h2{
+  opacity: 1;
+  top: 60%;
+  transition:opacity 3.5s ease-in;
+}
+div.containerCSS h1 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+  }
+  div.containerCSS:hover h1{
+    top: 44%;
+  }
+
+/*JavaScript Experience*/
+div.containerJS {
+    height: 180px;
+    width: 180px;
+    background-image: radial-gradient(#0077b3 50%, cyan, white);
+    border-radius: 50%;
+    right: 10%;
+    margin-top: 35%;
+    position: absolute;
+    transition: width 1s, height 1s;
+   }
+div.containerJS:hover {
+    height: 200px;
+    width: 200px;
+   }
+div.containerJS h2 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: .0;
+    transition: opacity 0s ease-in-out 0s;
+   }
+div.containerJS:hover h2{
+  opacity: 1;
+  top: 60%;
+  transition:opacity 2s ease-in;
+}
+div.containerJS h1 {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+  }
+  div.containerJS:hover h1{
+    top: 44%;
+  }

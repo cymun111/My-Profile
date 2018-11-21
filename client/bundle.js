@@ -9807,7 +9807,7 @@ var _services = __webpack_require__(98);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_angular2.default.module('myWebsite', [_angularjs2.default]).service('ContactService', _services.ContactService).controller('HomeController', _controllers.HomeController).controller('ContactController', _controllers.ContactController).controller('AboutController', _controllers.AboutController).controller('NotFoundController', _controllers.NotFoundController).config(routing);
+_angular2.default.module('myWebsite', [_angularjs2.default]).service('ContactService', _services.ContactService).controller('HomeController', _controllers.HomeController).controller('ContactController', _controllers.ContactController).controller('AboutController', _controllers.AboutController).controller('ExperienceController', _controllers.ExperienceController).controller('NotFoundController', _controllers.NotFoundController).config(routing);
 
 routing.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 function routing($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -9816,6 +9816,11 @@ function routing($stateProvider, $urlRouterProvider, $locationProvider) {
     templateUrl: './views/home.html',
     controller: _controllers.HomeController,
     controllerAs: 'Hcontroller'
+  }).state('experience', {
+    url: '/experience',
+    templateUrl: './views/myExperience.html',
+    controller: _controllers.ExperienceController,
+    controllerAs: 'Econtroller'
   }).state('contact', {
     url: '/contact',
     templateUrl: './views/contact.html',
@@ -48981,7 +48986,7 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, "html, body {\n    height: 100%;\n\n    /* Center and scale the image nicely */\n    background-image: url(\"/images/MainBackgroundFinal.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n", ""]);
+exports.push([module.i, "html, body {\n    height: 100%;\n\n    /* Center and scale the image nicely */\n    background-image: url(\"/images/MainBackgroundFinal.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n\n\n/*Experience HUB*/\ndiv.containerE {\n    height: 250px;\n    width: 250px;\n    background-image: radial-gradient(#0077b3 50%, cyan, white);\n    border-radius: 50%;\n    float: right;\n    margin-top: 20%;\n    margin-right: 5%;\n    position: relative;\n    transition: margin-right ease-in;\n   }\ndiv.containerE h2 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 40%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%) }\ndiv.containerE h1 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 53%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%) }\n\n/*HTML Experience*/\ndiv.containerHTML {\n    height: 90px;\n    width: 90px;\n    background-image: radial-gradient(#0077b3 50%, cyan, white);\n    border-radius: 50%;\n    right: 5%;\n    margin-top: 10%;\n    position: absolute;\n    transition: width 2s, height 2s;\n   }\ndiv.containerHTML:hover{\n    height: 135px;\n    width: 135px;\n   }\ndiv.containerHTML:hover > div.containerE{\n   background-color: red;\n   margin-right: 10%;\n   }\ndiv.containerHTML h2 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 55%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    opacity: .0;\n    transition: opacity 0s ease-in-out 0s;\n   }\ndiv.containerHTML:hover h2{\n  opacity: 1;\n  top: 60%;\n  transition:opacity 3.5s ease-in;\n}\ndiv.containerHTML h1 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    transition: 2s;\n  }\n  div.containerHTML:hover h1{\n    top: 44%;\n  }\n\n/*CSS Experience*/\ndiv.containerCSS {\n    height: 90px;\n    width: 90px;\n    background-image: radial-gradient(#0077b3 50%, cyan, white);\n    border-radius: 50%;\n    float: right;\n    margin-top: 18%;\n    position: relative;\n    transition: width 2s, height 2s;\n   }\ndiv.containerCSS:hover {\n    height: 135px;\n    width: 135px;\n   }\ndiv.containerCSS h2 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 55%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    opacity: .0;\n    transition: opacity 0s ease-in-out 0s;\n   }\ndiv.containerCSS:hover h2{\n  opacity: 1;\n  top: 60%;\n  transition:opacity 3.5s ease-in;\n}\ndiv.containerCSS h1 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    transition: 2s;\n  }\n  div.containerCSS:hover h1{\n    top: 44%;\n  }\n\n/*JavaScript Experience*/\ndiv.containerJS {\n    height: 180px;\n    width: 180px;\n    background-image: radial-gradient(#0077b3 50%, cyan, white);\n    border-radius: 50%;\n    right: 10%;\n    margin-top: 35%;\n    position: absolute;\n    transition: width 1s, height 1s;\n   }\ndiv.containerJS:hover {\n    height: 200px;\n    width: 200px;\n   }\ndiv.containerJS h2 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 55%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    opacity: .0;\n    transition: opacity 0s ease-in-out 0s;\n   }\ndiv.containerJS:hover h2{\n  opacity: 1;\n  top: 60%;\n  transition:opacity 2s ease-in;\n}\ndiv.containerJS h1 {\n    font-family: 'Indie Flower', cursive;\n    margin: 0;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    transition: 1s;\n  }\n  div.containerJS:hover h1{\n    top: 44%;\n  }\n", ""]);
 
 // exports
 
@@ -49590,6 +49595,10 @@ var HomeController = exports.HomeController = function HomeController() {
 
 var AboutController = exports.AboutController = function AboutController() {
   _classCallCheck(this, AboutController);
+};
+
+var ExperienceController = exports.ExperienceController = function ExperienceController() {
+  _classCallCheck(this, ExperienceController);
 };
 
 var ContactController = exports.ContactController = function () {

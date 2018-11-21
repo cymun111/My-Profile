@@ -10,6 +10,12 @@ export class AboutController{
   }
 }
 
+export class ExperienceController{
+  constructor(){
+
+  }
+}
+
 export class ContactController{
   constructor(ContactService){
     this.ContactService = ContactService;

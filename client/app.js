@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
 import './css/styles.css';
-import {HomeController, ContactController, AboutController, NotFoundController} from './controllers/controllers';
+import {HomeController, ExperienceController, ContactController, AboutController, NotFoundController} from './controllers/controllers';
 import {ContactService} from './services/services';
 
 
@@ -10,6 +10,7 @@ angular.module('myWebsite', [uirouter])
 .controller('HomeController', HomeController)
 .controller('ContactController', ContactController)
 .controller('AboutController', AboutController)
+.controller('ExperienceController', ExperienceController)
 .controller('NotFoundController', NotFoundController)
 .config(routing);
 
@@ -21,6 +22,12 @@ function routing($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl:'./views/home.html',
       controller: HomeController,
       controllerAs: 'Hcontroller',
+    })
+    .state('experience', {
+      url: '/experience',
+      templateUrl:'./views/myExperience.html',
+      controller: ExperienceController,
+      controllerAs: 'Econtroller',
     })
     .state('contact', {
       url: '/contact',

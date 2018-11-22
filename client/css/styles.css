@@ -12,279 +12,235 @@ html, body {
 /***********EXPERIENCE PAGE**************/
 /****************************************/
 
+/*All Skill Bubbles*/
+div.containerSkills {
+  background-image: radial-gradient(rgb(0, 153, 153) 35%, cyan 75%, Black 85%);
+  border-radius: 50%;
+  transition: width 2s, height 2s;
+  position: absolute;
+}
+div.containerSkills h1, h2{
+  font-family: 'Kalam', cursive;
+  margin: 0;
+  position: absolute;
+  margin-right: -50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+div.containerSkills h2{
+  opacity: .0;
+  transition: opacity 0s ease-in-out 0s;
+}
+div.containerSkills:hover h2{
+  opacity: 1;
+  top: 70%;
+  transition:opacity 1.5s ease-in;
+}
+div.containerSkills:hover h1{
+  top: 42%;
+}
 /*Experience HUB*/
 div.containerE {
-    height: 250px;
-    width: 250px;
-    background-image: radial-gradient(grey 35%, cyan 75%, Black 85%);
-    border-radius: 50%;
-    float: right;
-    margin-top: 20%;
-    margin-right: 5%;
-    position: relative;
-    transition: margin-right ease-in;
-    transition: background-image ease-in 4s;
-   }
-div.containerE:hover {
-  background-image: radial-gradient(grey 85%, cyan 15%, Black 100%);
-  }
-div.containerE h2 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) }
-div.containerE h1 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) }
-
+  height: 250px;
+  width: 250px;
+  background-image: radial-gradient(rgb(0, 153, 153) 35%, cyan 75%, Black 85%);
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  margin-top: 20%;
+}
+div.containerE h1{
+  font-family: 'Kalam', cursive;
+  margin: 0;
+  position: absolute;
+  margin-right: -50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 /*HTML Experience*/
 div.containerHTML {
     height: 110px;
     width: 110px;
-    background-image: radial-gradient(grey 35%, cyan 75%, Black 85%);
-    border-radius: 50%;
     right: 5%;
-    margin-top: 10%;
-    position: absolute;
-    transition: width 2s, height 2s;
-   }
+    margin-top: 11%;
+}
 div.containerHTML:hover{
     height: 140px;
     width: 140px;
-   }
-div.containerHTML:hover > div.containerE{
-   background-color: red;
-   margin-right: 10%;
-   }
-div.containerHTML h2 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    opacity: .0;
-    transition: opacity 0s ease-in-out 0s;
-   }
-div.containerHTML:hover h2{
-  opacity: 1;
-  top: 60%;
-  transition:opacity 3.5s ease-in;
 }
-div.containerHTML h1 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    transition: 2s;
-  }
-  div.containerHTML:hover h1{
-    top: 44%;
-  }
-
 /*CSS Experience*/
 div.containerCSS {
     height: 100px;
     width: 100px;
-    background-image: radial-gradient(grey 35%, cyan 75%, Black 85%);
-    border-radius: 50%;
     right: 21%;
     margin-top: 18%;
-    position: absolute;
-    transition: width 2s, height 2s;
-   }
+}
 div.containerCSS:hover {
     height: 140px;
     width: 140px;
-   }
-div.containerCSS h2 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    opacity: .0;
-    transition: opacity 0s ease-in-out 0s;
-   }
-div.containerCSS:hover h2{
-  opacity: 1;
-  top: 60%;
-  transition:opacity 3.5s ease-in;
 }
-div.containerCSS h1 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    transition: 2s;
-  }
-  div.containerCSS:hover h1{
-    top: 44%;
-  }
-
 /*JavaScript Experience*/
 div.containerJS {
     height: 180px;
     width: 180px;
-    background-image: radial-gradient(grey 35%, cyan 75%, Black 85%);
-    border-radius: 50%;
     right: 10%;
-    margin-top: 35%;
-    position: absolute;
-    transition: width 1s, height 1s;
-   }
+    margin-top: 39%;
+}
 div.containerJS:hover {
     height: 200px;
     width: 200px;
-   }
-div.containerJS h2 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    opacity: .0;
-    transition: opacity 0s ease-in-out 0s;
-   }
-div.containerJS:hover h2{
-  opacity: 1;
-  top: 60%;
-  transition:opacity 2s ease-in;
 }
-div.containerJS h1 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-  }
-div.containerJS:hover h1{
-  top: 44%;
-  }
-
 /*Angular Experience*/
 div.containerAngular {
-    height: 230px;
-    width: 230px;
-    background-image: radial-gradient(grey 35%, cyan 75%, Black 85%);
-    border-radius: 50%;
-    right: 20%;
-    margin-top: 2%;
-    position: absolute;
-    transition: width 1s, height 1s;
-   }
-div.containerAngular:hover {
-    height: 250px;
-    width: 250px;
-   }
-div.containerAngular h2 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    opacity: .0;
-    transition: opacity 0s ease-in-out 0s;
-   }
-div.containerAngular:hover h2{
-  opacity: 1;
-  top: 70%;
-  transition:opacity 2s ease-in;
+   height: 230px;
+   width: 230px;
+   right: 20%;
+   margin-top: 2%;
 }
-div.containerAngular h1 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-  }
-div.containerAngular:hover h1{
-  top: 42%;
-  }
-
+div.containerAngular:hover {
+   height: 250px;
+   width: 250px;
+}
 /*NodeJS Experience*/
 div.containerNode {
-    height: 130px;
-    width: 130px;
-    background-image: radial-gradient(grey 35%, cyan 75%, Black 85%);
-    border-radius: 50%;
-    right: 23%;
-    margin-top: 30%;
-    position: absolute;
-    transition: width 1s, height 1s;
-   }
-div.containerNode:hover {
-    height: 150px;
-    width: 150px;
-   }
-div.containerNode h2 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    opacity: .0;
-    transition: opacity 0s ease-in-out 0s;
-   }
-div.containerNode:hover h2{
-  opacity: 1;
-  top: 70%;
-  transition:opacity 2s ease-in;
+   height: 130px;
+   width: 130px;
+   right: 23%;
+   margin-top: 30%;
 }
-div.containerNode h1 {
-    font-family: 'Kalam', cursive;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-  }
-div.containerNode:hover h1{
-  top: 42%;
-  }
-
+div.containerNode:hover {
+   height: 150px;
+   width: 150px;
+}
+/*Git Experience*/
+div.containerGit {
+   height: 100px;
+   width: 100px;
+   right: 28%;
+   margin-top: 38%;
+}
+div.containerGit:hover {
+   height: 120px;
+   width: 120px;
+}
+/*jQuery Experience*/
+div.containerjQuery {
+   height: 130px;
+   width: 130px;
+   right: 8%;
+   margin-top: 1%;
+}
+div.containerjQuery:hover {
+   height: 150px;
+   width: 150px;
+}
+/*ES6 Experience*/
+div.containerES6 {
+   height: 100px;
+   width: 100px;
+   right: 30%;
+   margin-top: 22%;
+}
+div.containerES6:hover {
+   height: 120px;
+   width: 120px;
+}
+/*noSQL Experience*/
+div.containernoSQL {
+   height: 130px;
+   width: 130px;
+   right: 35%;
+   margin-top: 30%;
+}
+div.containernoSQL:hover {
+   height: 150px;
+   width: 150px;
+}
+/*SQL Experience*/
+div.containerSQL {
+   height: 100px;
+   width: 100px;
+   right: 38%;
+   margin-top: 1%;
+}
+div.containerSQL:hover {
+   height: 115px;
+   width: 115px;
+}
+/*JSON Experience*/
+div.containerJSON {
+   height: 115px;
+   width: 115px;
+   right: 38%;
+   margin-top: 39%;
+}
+div.containerJSON:hover {
+   height: 130px;
+   width: 130px;
+}
+/*Bootstrap Experience*/
+div.containerBootstrap {
+   height: 210px;
+   width: 210px;
+   right: 37%;
+   margin-top: 13%;
+}
+div.containerBootstrap:hover {
+   height: 250px;
+   width: 250px;
+}
 /****************************************/
 /*************ABOUT PAGE*****************/
 /****************************************/
 
-div.jumbotron h1, p{
+div.containerAbout h1, p{
   font-family: Kalam;
 }
-div.jumbotron {
+div.containerAbout {
   vertical-align: middle;
+  background-image: linear-gradient(0deg, rgba(200, 255, 350, .0), rgb(128, 128, 128) 15%, 95%, rgba(200, 255, 350, .0));
+  padding: 5%;
+}
+div.containerAbout img{
+  float:left;
+  margin-right:15px;
+  max-height:100%;
+  max-width:100%;
+  border-radius: 25%;
+}
+div.containerImg{
+  background-image: radial-gradient(circle at center, rgba(255,255,255,.7), White );
 }
 
 /****************************************/
 /*************CONTACT PAGE***************/
 /****************************************/
+div.containerContact{
+  position: absolute;
+  right: 33%;
+  margin-top: 5%;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .0), rgba(153, 235, 255, .7) 30%, 80%, rgba(255, 255, 255, .0) 100%);
+}
+div.containerContact h1, form{
+margin-left: 13%;
+font-family: 'Kalam', cursive;
+}
+/****************************************/
+/**************HOME PAGE*****************/
+/****************************************/
+div.home{
+  height: 100%;
+  width: 100%;
+}
+div.home h1{
+  position: absolute;
+  margin-top: 15%;
+  color: Black;
+  font-size: 3em;
+  font-family:'Kalam', cursive;
+  background-image:radial-gradient(ellipse at 0% 50%,White 20%, rgba(0, 204, 255, .15),60%,transparent),
+                   radial-gradient(ellipse at 100% 50%, White 20%, rgba(0, 204, 255, .15),60%,transparent);
+}

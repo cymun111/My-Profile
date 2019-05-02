@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "build": "webpack && node server"
+    "build": "webpack"
   },
   "author": "Kenyon Westbrook",
   "license": "ISC",

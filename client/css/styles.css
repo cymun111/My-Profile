@@ -14,84 +14,50 @@ html, body {
 
 /*All Skill Bubbles*/
 div.containerSkills {
-  background-image: radial-gradient(rgb(0, 153, 153) 35%, cyan 75%, Black 85%);
-  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: width 2s, height 2s;
   position: absolute;
 }
-div.containerSkills h1, h2{
-  font-family: 'Raleway', cursive;
-  margin: 0;
-  position: absolute;
-  margin-right: -50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: 1s;
-}
-div.containerSkills h2{
-  opacity: .0;
-  transition: opacity 0s ease-in-out 0s;
-}
-div.containerSkills:hover h2{
-  opacity: 1;
-  top: 70%;
-  transition:opacity 1.5s ease-in;
-}
-div.containerSkills:hover h1{
-  top: 42%;
-}
-/*Experience HUB*/
-div.containerE {
-  height: 250px;
-  width: 250px;
-  background-image: radial-gradient(rgb(0, 153, 153) 35%, cyan 75%, Black 85%);
-  border-radius: 50%;
-  position: absolute;
-  right: 5%;
-  margin-top: 20%;
-}
-div.containerE h1{
-  font-family: 'Raleway', cursive;
-  margin: 0;
-  position: absolute;
-  margin-right: -50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 /*HTML Experience*/
 div.containerHTML {
-    height: 150px;
-    width: 150px;
-    right: 5%;
-    margin-top: 11%;
+    height: 300px;
+    width: 300px;
+    right: 20%;
+    margin-top: 5%;
+    display:inline;
+    background-image: url("/images/Html5-logo.png");
 }
 div.containerHTML:hover{
-    height: 180px;
-    width: 180px;
+    height: 350px;
+    width: 350px;
 }
 /*CSS Experience*/
 div.containerCSS {
-    height: 120px;
-    width: 120px;
-    right: 21%;
-    margin-top: 18%;
+    height: 300px;
+    width: 300px;
+    right: 40%;
+    margin-top: 5%;
+    display: inline;
+    background-image: url("/images/CSS3.png");
+
 }
 div.containerCSS:hover {
-    height: 150px;
-    width: 150px;
+    height: 350px;
+    width: 350px;
 }
 /*JavaScript Experience*/
 div.containerJS {
-    height: 200px;
-    width: 200px;
-    right: 10%;
-    margin-top: 36%;
+    height: 300px;
+    width: 300px;
+    right: 60%;
+    margin-top: 5%;
+    background-image: url("/images/Javascript.png");
 }
 div.containerJS:hover {
-    height: 230px;
-    width: 230px;
+    height: 350px;
+    width: 350px;
 }
 /*Angular Experience*/
 div.containerAngular {

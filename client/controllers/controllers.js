@@ -1,6 +1,10 @@
 export class HomeController{
   constructor(){
+    this.welcomeMessage();
 
+  }
+  welcomeMessage(){
+    alert("This website is under construction, Please be paitent.")
   }
 }
 

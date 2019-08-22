@@ -49596,9 +49596,22 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var HomeController = exports.HomeController = function HomeController() {
-  _classCallCheck(this, HomeController);
-};
+var HomeController = exports.HomeController = function () {
+  function HomeController() {
+    _classCallCheck(this, HomeController);
+
+    this.welcomeMessage();
+  }
+
+  _createClass(HomeController, [{
+    key: 'welcomeMessage',
+    value: function welcomeMessage() {
+      alert("This website is under construction, Please be paitent.");
+    }
+  }]);
+
+  return HomeController;
+}();
 
 var PortfolioController = exports.PortfolioController = function () {
   function PortfolioController() {

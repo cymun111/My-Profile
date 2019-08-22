@@ -9803,11 +9803,13 @@ __webpack_require__(92);
 
 var _controllers = __webpack_require__(97);
 
-var _services = __webpack_require__(98);
+var _testController = __webpack_require__(98);
+
+var _services = __webpack_require__(99);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_angular2.default.module('myWebsite', [_angularjs2.default]).service('ContactService', _services.ContactService).controller('HomeController', _controllers.HomeController).controller('ContactController', _controllers.ContactController).controller('AboutController', _controllers.AboutController).controller('ExperienceController', _controllers.ExperienceController).controller('NotFoundController', _controllers.NotFoundController).config(routing);
+_angular2.default.module('myWebsite', [_angularjs2.default]).service('ContactService', _services.ContactService).controller('HomeController', _controllers.HomeController).controller('ContactController', _controllers.ContactController).controller('PortfolioController', _controllers.PortfolioController).controller('ExperienceController', _controllers.ExperienceController).controller('TestController', _testController.TestController).controller('NotFoundController', _controllers.NotFoundController).config(routing);
 
 routing.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 function routing($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -9826,11 +9828,16 @@ function routing($stateProvider, $urlRouterProvider, $locationProvider) {
     templateUrl: './views/contact.html',
     controller: _controllers.ContactController,
     controllerAs: 'Ccontroller'
-  }).state('about', {
-    url: '/about',
-    templateUrl: './views/about.html',
-    controller: _controllers.AboutController,
-    controllerAs: 'Acontroller'
+  }).state('portfolio', {
+    url: '/portfolio',
+    templateUrl: './views/portfolio.html',
+    controller: _controllers.PortfolioController,
+    controllerAs: 'Pcontroller'
+  }).state('test', {
+    url: '/test',
+    templateUrl: './views/test.html',
+    controller: _testController.TestController,
+    controllerAs: 'Tcontroller'
   }).state('notFound', {
     url: '/notFound',
     templateUrl: './views/notFound.html',
@@ -48986,7 +48993,7 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, "html, body {\n    height: 100%;\n\n    /* Center and scale the image nicely */\n    background-image: url(\"/images/MainBackgroundFinal.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n\n/****************************************/\n/***********EXPERIENCE PAGE**************/\n/****************************************/\n\n/*All Skill Bubbles*/\ndiv.containerSkills {\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  transition: width 2s, height 2s;\n  position: absolute;\n}\n/*HTML Experience*/\ndiv.containerHTML {\n    height: 300px;\n    width: 300px;\n    right: 20%;\n    margin-top: 5%;\n    display:inline;\n    background-image: url(\"/images/Html5-logo.png\");\n}\ndiv.containerHTML:hover{\n    height: 350px;\n    width: 350px;\n}\n/*CSS Experience*/\ndiv.containerCSS {\n    height: 300px;\n    width: 300px;\n    right: 40%;\n    margin-top: 5%;\n    display: inline;\n    background-image: url(\"/images/CSS3.png\");\n\n}\ndiv.containerCSS:hover {\n    height: 350px;\n    width: 350px;\n}\n/*JavaScript Experience*/\ndiv.containerJS {\n    height: 300px;\n    width: 300px;\n    right: 60%;\n    margin-top: 5%;\n    background-image: url(\"/images/Javascript.png\");\n}\ndiv.containerJS:hover {\n    height: 350px;\n    width: 350px;\n}\n/*Angular Experience*/\ndiv.containerAngular {\n   height: 260px;\n   width: 260px;\n   right: 20%;\n   margin-top: 2%;\n}\ndiv.containerAngular:hover {\n   height: 290px;\n   width: 290px;\n}\n/*NodeJS Experience*/\ndiv.containerNode {\n   height: 150px;\n   width: 150px;\n   right: 23%;\n   margin-top: 30%;\n}\ndiv.containerNode:hover {\n   height: 190px;\n   width: 190px;\n}\n/*Git Experience*/\ndiv.containerGit {\n   height: 120px;\n   width: 120px;\n   right: 28%;\n   margin-top: 38%;\n}\ndiv.containerGit:hover {\n   height: 140px;\n   width: 140px;\n}\n/*jQuery Experience*/\ndiv.containerjQuery {\n   height: 150px;\n   width: 150px;\n   right: 8%;\n   margin-top: 1%;\n}\ndiv.containerjQuery:hover {\n   height: 180px;\n   width: 180px;\n}\n/*ES6 Experience*/\ndiv.containerES6 {\n   height: 130px;\n   width: 130px;\n   right: 30%;\n   margin-top: 22%;\n}\ndiv.containerES6:hover {\n   height: 150px;\n   width: 150px;\n}\n/*noSQL Experience*/\ndiv.containernoSQL {\n   height: 160px;\n   width: 160px;\n   right: 35%;\n   margin-top: 30%;\n}\ndiv.containernoSQL:hover {\n   height: 180px;\n   width: 180px;\n}\n/*SQL Experience*/\ndiv.containerSQL {\n   height: 130px;\n   width: 130px;\n   right: 38%;\n   margin-top: 1%;\n}\ndiv.containerSQL:hover {\n   height: 165px;\n   width: 165px;\n}\n/*JSON Experience*/\ndiv.containerJSON {\n   height: 125px;\n   width: 125px;\n   right: 38%;\n   margin-top: 39%;\n}\ndiv.containerJSON:hover {\n   height: 150px;\n   width: 150px;\n}\n/*Bootstrap Experience*/\ndiv.containerBootstrap {\n   height: 260px;\n   width: 260px;\n   right: 37%;\n   margin-top: 13%;\n}\ndiv.containerBootstrap:hover {\n   height: 280px;\n   width: 280px;\n}\n/****************************************/\n/*************ABOUT PAGE*****************/\n/****************************************/\n\ndiv.containerAbout h1, p{\n  font-family: 'Raleway';\n}\ndiv.containerAbout {\n  vertical-align: middle;\n  background-image: linear-gradient(0deg, rgba(200, 255, 350, .0), rgb(128, 128, 128) 15%, 95%, rgba(200, 255, 350, .0));\n  padding: 5%;\n}\ndiv.containerAbout img{\n  float:left;\n  margin-right:15px;\n  max-height:600px;\n  max-width:400px;\n  border-radius: 25%;\n}\ndiv.containerImg{\n  background-image: radial-gradient(circle at center, rgba(255,255,255,.7), White );\n}\n\n/****************************************/\n/*************CONTACT PAGE***************/\n/****************************************/\ndiv.containerContact{\n  position: absolute;\n  right: 33%;\n  margin-top: 5%;\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, .0), rgba(153, 235, 255, .7) 30%, 80%, rgba(255, 255, 255, .0) 100%);\n}\ndiv.containerContact h1, form{\nmargin-left: 13%;\nfont-family: 'Raleway', cursive;\n}\n/****************************************/\n/**************HOME PAGE*****************/\n/****************************************/\ndiv.home{\n  height: 100%;\n  width: 100%;\n}\ndiv.home h1{\n  position: absolute;\n  margin-top: 15%;\n  color: Black;\n  font-size: 3em;\n  font-family:'Raleway', cursive;\n  background-image: linear-gradient(0deg, rgba(255, 255, 255, .5), rgba(153, 235, 255, 1) 30%, 80%, rgba(255, 255, 255, .5) 100%);\n}\n", ""]);
+exports.push([module.i, "/*******************/\n/******Nav-Bar******/\n/*******************/\nnav {\n  background-color: #000000;\n}\na{\n  padding: 10px;\n  font-size: 25px;\n}\na:hover {\n  text-decoration: none;\n}\ndiv>ul>li>button{\n  background-color: #000000;\n}\n\n/*******************/\n/*****Home page*****/\n/*******************/\n\n.container {\n  max-width: 960px;\n  margin: 0 auto;\n}\nsection.section:last-child {\n  margin-bottom: 0;\n}\nsection.section h1 {\n  margin-bottom: 40px;\n  font-family: \"Roboto Slab\", serif;\n  font-size: 50px;\n  padding-top: 5%;\n  color: Black;\n}\nsection.section h2 {\n  margin-bottom: 40px;\n  font-family: \"Roboto Slab\", serif;\n  font-size: 40px;\n  padding-top: 1%;\n  color: Black;\n}\nsection:nth-child(3).section h2{\n  padding-top: 20%;\n  font-size: 35px;\n  color: White;\n  text-align: center;\n}\nsection:nth-child(5).section h2{\n  padding-top: 30%;\n  font-size: 70px;\n  color: White;\n  text-align: center;\n}\nsection.section p {\n  margin-bottom: 40px;\n  font-size: 16px;\n  font-weight: 300;\n}\nsection.section p:last-child {\n  margin-bottom: 0;\n}\nsection.section.content {\n  padding: 40px 0;\n}\nsection.section.parallax {\n  height: 600px;\n  background-position: 50% 50%;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n  background-size: cover;\n\n}\n\nsection.section.parallax-1 {\n  background-image: url(\"/images/1.jpg\");\n  opacity: 0.9;\n}\nsection.section.parallax-2 {\n  background-image: url(\"/images/2.png\");\n}\nsection.section.parallax-3 {\n  background-image: url(\"/images/3.jpg\");\n}\n@media all and (min-width: 600px) {\n  section.section h2 {\n    font-size: 42px;\n  }\n  section.section p {\n    font-size: 20px;\n  }\n  section.section.parallax h1 {\n    font-size: 96px;\n  }\n}\n@media all and (min-width: 960px) {\n  section.section.parallax h1 {\n    font-size: 160px;\n  }\n}\n/***************************************/\n/************carousel-test**************/\n/***************************************/\n.carousel-wrapper {\n  overflow: hidden;\n  width: 100%;\n  margin: auto;\n}\n.carousel-wrapper * {\n  box-sizing: border-box;\n}\n.carousel{\n  transform-style: preserve-3d;\n}\n.carousel__photo{\n  opacity: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  margin:auto;\n  z-index: 100;\n  transition: transform 1.5s, opacity 1.5s, x-index 1.5s;\n}\n.carousel__photo.initial,\n.carousel__photo.active {\n  opacity: 1;\n  position: relative;\n  z-index: 900;\n}\n.carousel__photo.prev,\n.carousel__photo.next {\n  z-index: 800;\n}\n.carousel__photo.prev {\n  transform: translateX(100%);\n  /* transform: translateY(100%);\n  transform: translateX(100%) rotate(360deg); /* Move 'prev' item to the left*/\n}\n.carousel__photo.next {\n  transform: translateX(-100%);\n  /* transform: translateY(-100%);\n  transform: translateX(-100%) rotate(-360deg); /* Move 'next' item to the right*/\n}\n.carousel__button--prev,\n.carousel__button--next {\n  position: absolute;\n  top:50%;\n  width: 3rem;\n  height: 3rem;\n  background-color: #FFF;\n  transform: translateY(-50%);\n  border-radius: 50%;\n  cursor: pointer;\n  z-index: 1001; /* Sit on top of everything */\n  border: 1px solid black;\n}\n.carousel__button--prev {\n  left:2%;\n}\n.carousel__button--next {\n  right:2%;\n}\n.carousel__button--prev::after,\n.carousel__button--next::after {\n  content: \" \";\n  position: absolute;\n  width: 10px;\n  height: 10px;\n  top: 50%;\n  left: 54%;\n  border-right: 2px solid black;\n  border-bottom: 2px solid black;\n  transform: translate(-50%, -50%) rotate(135deg);\n}\n.carousel__button--next::after {\n  left: 47%;\n  transform: translate(-50%, -50%) rotate(-45deg);\n}\n\n/****************************************/\n/***********EXPERIENCE PAGE**************/\n/****************************************/\n\n/*HTML Experience*/\nsection.parallax-1 div > div:nth-child(1) {\n    height: 250px;\n    width: 250px;\n    right: 16.9%;\n    margin-top: 2%;\n    display:inline;\n    background-image: url(\"/images/Html5-logo.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n/*CSS Experience*/\nsection.parallax-1 div > div:nth-child(2) {\n    height: 250px;\n    width: 250px;\n    right: 41.9%;\n    margin-top: 2%;\n    display: inline;\n    background-image: url(\"/images/CSS3.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n/*JavaScript Experience*/\nsection.parallax-1 div > div:nth-child(3) {\n    height: 250px;\n    width: 250px;\n    right: 66.9%;\n    margin-top: 2%;\n    background-image: url(\"/images/Javascript.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: absolute;\n}\n/*Angular Experience*/\nsection.parallax-1 div > div:nth-child(4) {\n   height: 250px;\n   width: 240px;\n   right: 59.8%;\n   margin-top: 17%;\n   background-image: url(\"/images/Angular-logo.png\");\n   background-position: center;\n   background-repeat: no-repeat;\n   background-size: cover;\n   position: absolute;\n}\n/*NodeJS Experience*/\nsection.parallax-1 div > div:nth-child(5) {\n   height: 250px;\n   width: 400px;\n   right: 22.5%;\n   margin-top: 17%;\n   background-image: url(\"/images/nodejs-logo.png\");\n   background-position: center;\n   background-repeat: no-repeat;\n   background-size: cover;\n   position: absolute;\n}\n\n/*All Skill Bubbles*/\nsection.parallax-1.container div{\n   width: 100%;\n}\n@media (max-width: 425px) {\n  div.containerHTML{\n    max-height: 100px;\n    max-width: 100px;\n    padding: 15px;\n    right: 50%;\n    margin-top: 5%;\n    display: block;\n  }\n  div.containerJS{\n    max-height: 100px;\n    max-width: 100px;\n    padding: 15px;\n    right: 50%;\n    margin-top: 20%;\n    display: block;\n  }\n  div.containerCSS{\n    max-height: 100px;\n    max-width: 100px;\n    padding: 15px;\n    right: 50%;\n    margin-top: 35%;\n    display: block;\n  }\n  div.containerNode{\n    max-height: 100px;\n    max-width: 175px;\n    padding: 15px;\n    right: 50%;\n    margin-top: 45%;\n    display: block;\n  }\n  div.containerAngular{\n    max-height: 100px;\n    max-width: 100px;\n    padding: 15px;\n    right: 50%;\n    margin-top: 55%;\n    display: block;\n  }\n}\n@media (width: 768px) {\n  section.parallax-1 div > div:nth-child(1){\n    height: 175px;\n    width: 175px;\n    right: 13.4%;\n    margin-top: 5%;\n  }\n  section.parallax-1 div > div:nth-child(2){\n    height: 175px;\n    width: 175px;\n    right: 38.5%;\n    margin-top: 5%;\n  }\n  section.parallax-1 div > div:nth-child(3){\n    height: 175px;\n    width: 175px;\n    right: 63.5%;\n    margin-top: 5%;\n  }\n  section.parallax-1 div > div:nth-child(4){\n    height: 175px;\n    width: 165px;\n    margin-top: 35%;\n    right: 54.9%;\n  }\n  section.parallax-1 div > div:nth-child(5){\n    height: 175px;\n    width: 275px;\n    margin-top: 35%;\n    right: 15.4%;\n  }\n}\n\n@media (width: 1024px) {\n  section.parallax-1 div > div:nth-child(1){\n    height: 200px;\n    width: 200px;\n    right: 13%;\n  }\n  section.parallax-1 div > div:nth-child(2){\n    height: 200px;\n    width: 200px;\n    right: 40%;\n  }\n  section.parallax-1 div > div:nth-child(3){\n    height: 200px;\n    width: 200px;\n    right: 65%;\n  }\n  section.parallax-1 div > div:nth-child(4){\n    height: 210px;\n    width: 200px;\n    right: 56.6%;\n    margin-top: 27%;\n  }\n  section.parallax-1 div > div:nth-child(5){\n    height: 205px;\n    width: 330px;\n    right: 19%;\n    margin-top: 27%;\n  }\n}\n  @media (width: 1440px) {\n    section.parallax-1 div > div:nth-child(1){\n      max-height: 300px;\n      max-width: 300px;\n      right: 13%;\n    }\n    section.parallax-1 div > div:nth-child(2){\n      max-height: 300px;\n      max-width: 300px;\n      right: 39.5%;\n    }\n    section.parallax-1 div > div:nth-child(3){\n      max-height: 300px;\n      max-width: 300px;\n      right: 64.6%;\n    }\n    section.parallax-1 div > div:nth-child(4){\n      height: 257px;\n      width: 245px;\n      right: 58%;\n      margin-top: 22%;\n    }\n    section.parallax-1 div > div:nth-child(5){\n      height: 276px;\n      width: 450px;\n      right: 20.3%;\n      margin-top: 21.2%;\n    }\n}\nmargin-top: 22%;\n  @media (width: 2560px) {\n    section.parallax-1 div > div:nth-child(1){\n      height: 450px;\n      width: 450px;\n      right: 14%;\n      margin-top: 2%;\n    }\n    section.parallax-1 div > div:nth-child(2){\n      height: 450px;\n      width: 450px;\n      right: 39.4%;\n      margin-top: 2%;\n    }\n    section.parallax-1 div > div:nth-child(3){\n      height: 450px;\n      width: 450px;\n      right: 64.3%;\n      margin-top: 2%;\n    }\n}\n  /* section.parallax-1.container:nth-child(1){\n    max-height: 200px;\n    max-width: 325px;\n    padding: 15px;\n  }\n  section.parallax-1.container:nth-child(1){\n    max-height: 200px;\n    max-width: 200px;\n    padding: 15px;\n  } */\n\n/*Git Experience*/\ndiv.containerGit {\n   height: 120px;\n   width: 120px;\n   right: 28%;\n   margin-top: 38%;\n}\ndiv.containerGit:hover {\n   height: 140px;\n   width: 140px;\n}\n/*jQuery Experience*/\ndiv.containerjQuery {\n   height: 150px;\n   width: 150px;\n   right: 8%;\n   margin-top: 1%;\n}\ndiv.containerjQuery:hover {\n   height: 180px;\n   width: 180px;\n}\n/*ES6 Experience*/\ndiv.containerES6 {\n   height: 130px;\n   width: 130px;\n   right: 30%;\n   margin-top: 22%;\n}\ndiv.containerES6:hover {\n   height: 150px;\n   width: 150px;\n}\n/*noSQL Experience*/\ndiv.containernoSQL {\n   height: 160px;\n   width: 160px;\n   right: 35%;\n   margin-top: 30%;\n}\ndiv.containernoSQL:hover {\n   height: 180px;\n   width: 180px;\n}\n/*SQL Experience*/\ndiv.containerSQL {\n   height: 130px;\n   width: 130px;\n   right: 38%;\n   margin-top: 1%;\n}\ndiv.containerSQL:hover {\n   height: 165px;\n   width: 165px;\n}\n/*JSON Experience*/\ndiv.containerJSON {\n   height: 125px;\n   width: 125px;\n   right: 38%;\n   margin-top: 39%;\n}\ndiv.containerJSON:hover {\n   height: 150px;\n   width: 150px;\n}\n/*Bootstrap Experience*/\ndiv.containerBootstrap {\n   height: 260px;\n   width: 260px;\n   right: 37%;\n   margin-top: 13%;\n}\ndiv.containerBootstrap:hover {\n   height: 280px;\n   width: 280px;\n}\n/****************************************/\n/*************ABOUT PAGE*****************/\n/****************************************/\n\n\n\n/****************************************/\n/*************CONTACT PAGE***************/\n/****************************************/\ndiv.containerContact{\n  position: absolute;\n  right: 33%;\n  margin-top: 5%;\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, .0), rgba(153, 235, 255, .7) 30%, 80%, rgba(255, 255, 255, .0) 100%);\n}\ndiv.containerContact h1, form{\nmargin-left: 13%;\nfont-family: 'Raleway', cursive;\n}\n/****************************************/\n/**************HOME PAGE*****************/\n/****************************************/\ndiv>img.profile {\n  border-radius: 50%;\n  position: absolute;\n  margin-top: -24px;\n  height: 250px;\n  width: auto;\n  left: 0%;\n}\n\ndiv.home{\n  height: 100%;\n  width: 100%;\n}\ndiv.home h1{\n  position: absolute;\n  margin-top: 15%;\n  color: Black;\n  font-size: 3em;\n  font-family:'Raleway', cursive;\n  background-image: linear-gradient(0deg, rgba(255, 255, 255, .5), rgba(153, 235, 255, 1) 30%, 80%, rgba(255, 255, 255, .5) 100%);\n}\n", ""]);
 
 // exports
 
@@ -49593,9 +49600,70 @@ var HomeController = exports.HomeController = function HomeController() {
   _classCallCheck(this, HomeController);
 };
 
-var AboutController = exports.AboutController = function AboutController() {
-  _classCallCheck(this, AboutController);
-};
+var PortfolioController = exports.PortfolioController = function () {
+  function PortfolioController() {
+    _classCallCheck(this, PortfolioController);
+  }
+
+  _createClass(PortfolioController, [{
+    key: 'reverseText',
+    value: function reverseText() {
+      var myString = document.getElementById('myString').value;
+      var arr = myString.split('');
+      arr.reverse();
+      var newString = arr.join('');
+      document.getElementById('newString').innerHTML = newString;
+    }
+  }, {
+    key: 'encrypt',
+    value: function encrypt() {
+      var originalText = document.getElementById('originalText').value.toLowerCase();
+      var arrEncrypt = originalText.split('');
+      var arrLowAlph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+      var cypher = ["J", "O", "4", "E", "*", "#", ")", "K", "D", "A", "8", "0", "@", "&", "$", "B", "@", "P", "G", "W", "L", "M", "3", "V", "?", "%"];
+      var length = arrEncrypt.length * arrLowAlph.length;
+      for (var i = 0; i < length; i++) {
+        var y = 0;
+        for (var x = 0; x < arrLowAlph.length; x++) {
+          // console.log(arrEncrypt[i])
+          // console.log(arrLowAlph[x])
+          if (arrEncrypt[i] == arrLowAlph[x]) {
+            var num = arrLowAlph.indexOf(arrLowAlph[x]);
+            arrEncrypt[i] = cypher[num];
+            console.log(arrEncrypt);
+          }
+          var endString = arrEncrypt.join('');
+          document.getElementById('encrypted-text').innerHTML = endString;
+        }
+      }
+    }
+  }, {
+    key: 'decrypt',
+    value: function decrypt() {
+      var encryptedText = document.getElementById('originalText').value;
+      var arrDecrypt = encryptedText.split('');
+      var arrLowAlph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+      var cypher = ["J", "O", "4", "E", "*", "#", ")", "K", "D", "A", "8", "0", "@", "&", "$", "B", "@", "P", "G", "W", "L", "M", "3", "V", "?", "%"];
+      var length = arrDecrypt.length * arrLowAlph.length;
+      for (var i = 0; i < length; i++) {
+        var y = 0;
+        for (var x = 0; x < cypher.length; x++) {
+          // console.log(arrEncrypt[i])
+          // console.log(arrLowAlph[x])
+          if (arrDecrypt[i] == cypher[x]) {
+            var num = cypher.indexOf(cypher[x]);
+            arrDecrypt[i] = arrLowAlph[num];
+            console.log(arrDecrypt);
+          }
+          var endString = arrDecrypt.join('');
+          document.getElementById('encrypted-text').innerHTML = endString;
+        }
+      }
+    }
+  }]);
+
+  return PortfolioController;
+}();
 
 var ExperienceController = exports.ExperienceController = function ExperienceController() {
   _classCallCheck(this, ExperienceController);
@@ -49609,7 +49677,7 @@ var ContactController = exports.ContactController = function () {
   }
 
   _createClass(ContactController, [{
-    key: "sendContactEmail",
+    key: 'sendContactEmail',
     value: function sendContactEmail() {
       var contact = JSON.stringify(this.contact);
       //console.log(contact);
@@ -49626,6 +49694,122 @@ var NotFoundController = exports.NotFoundController = function NotFoundControlle
 
 /***/ }),
 /* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TestController = exports.TestController = function () {
+  function TestController() {
+    _classCallCheck(this, TestController);
+
+    this.itemClassName = "carousel__photo";
+    this.items = document.getElementsByClassName(this.itemClassName);
+    this.totalItems = this.items.length;
+    this.moving = false;
+    this.slide = 0;
+    this.items[this.totalItems - 1].classList.add("prev");
+    this.items[0].classList.add("active");
+    this.items[1].classList.add("next");
+  }
+  //carousel Next button
+
+
+  _createClass(TestController, [{
+    key: "nextSlide",
+    value: function nextSlide() {
+      if (this.moving) {}
+      if (this.moving == false) {
+        // If it's the last slide, reset to 0, else +1
+        if (this.slide === this.totalItems - 1) {
+          this.slide = 0;
+        } else {
+          this.slide++;
+        }
+        // Move carousel to updated slide
+        this.moveCarouselTo();
+      }
+    }
+    // Carousel Previous Button
+
+  }, {
+    key: "movePrev",
+    value: function movePrev() {
+      if (!this.moving) {
+        // If it's the first slide, set as the last slide, else -1
+        if (this.slide === 0) {
+          this.slide = this.totalItems - 1;
+        } else {
+          this.slide--;
+        }
+
+        // Move carousel to updated slide
+        this.moveCarouselTo();
+      }
+    }
+  }, {
+    key: "moveCarouselTo",
+    value: function moveCarouselTo() {
+      // Check if carousel is moving, if not, allow interaction
+      if (!this.moving) {
+        this.disableInteraction();
+        // Update the "old" adjacent slides with "new" ones
+        var newPrevious = this.slide - 1,
+            newNext = this.slide + 1,
+            oldPrevious = this.slide - 2,
+            oldNext = this.slide + 2;
+        // Test if carousel has more than three items
+        if (this.totalItems - 1 > 3) {
+          // Checks and updates if the new slides are out of bounds
+          if (newPrevious <= 0) {
+            oldPrevious = this.totalItems - 1;
+          } else if (newNext >= this.totalItems - 1) {
+            oldNext = 0;
+          }
+          // Checks and updates if slide is at the beginning/end
+          if (this.slide === 0) {
+            newPrevious = this.totalItems - 1;
+            oldPrevious = this.totalItems - 2;
+            oldNext = this.slide + 1;
+          } else if (this.slide === this.totalItems - 1) {
+            newPrevious = this.slide - 1;
+            newNext = 0;
+            oldNext = 1;
+          }
+          this.items[oldPrevious].className = this.itemClassName;
+          this.items[oldNext].className = this.itemClassName;
+          // Add new classes
+          this.items[newPrevious].className = this.itemClassName + " prev";
+          this.items[this.slide].className = this.itemClassName + " active";
+          this.items[newNext].className = this.itemClassName + " next";
+        }
+      }
+    }
+  }, {
+    key: "disableInteraction",
+    value: function disableInteraction() {
+      var _this = this;
+
+      this.moving = true;
+      setTimeout(function () {
+        return _this.moving = false;
+      }, 500);
+    }
+  }]);
+
+  return TestController;
+}();
+
+/***/ }),
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

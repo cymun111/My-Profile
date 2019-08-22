@@ -1,7 +1,8 @@
 import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
 import './css/styles.css';
-import {HomeController, ExperienceController, ContactController, AboutController, NotFoundController} from './controllers/controllers';
+import {HomeController, ExperienceController, ContactController, PortfolioController, NotFoundController} from './controllers/controllers';
+import {TestController} from './controllers/test-controller';
 import {ContactService} from './services/services';
 
 
@@ -9,8 +10,9 @@ angular.module('myWebsite', [uirouter])
 .service('ContactService', ContactService)
 .controller('HomeController', HomeController)
 .controller('ContactController', ContactController)
-.controller('AboutController', AboutController)
+.controller('PortfolioController', PortfolioController)
 .controller('ExperienceController', ExperienceController)
+.controller('TestController', TestController)
 .controller('NotFoundController', NotFoundController)
 .config(routing);
 
@@ -35,11 +37,17 @@ function routing($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: ContactController,
       controllerAs: 'Ccontroller',
     })
-    .state('about', {
-      url: '/about',
-      templateUrl:'./views/about.html',
-      controller: AboutController,
-      controllerAs: 'Acontroller',
+    .state('portfolio', {
+      url: '/portfolio',
+      templateUrl:'./views/portfolio.html',
+      controller: PortfolioController,
+      controllerAs: 'Pcontroller',
+    })
+    .state('test', {
+      url: '/test',
+      templateUrl:'./views/test.html',
+      controller: TestController,
+      controllerAs: 'Tcontroller',
     })
     .state('notFound', {
       url: '/notFound',

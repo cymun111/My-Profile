@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <h1>My Mini Apps</h1>
+    <div class="word-reverse">
+      <h2>Word Reverse</h2>
+      <input id="myString">
+      <button type="submit" ng-click="Pcontroller.reverseText()">Reverse Text</button>
+      <p id="newString"></p>
+    </div>
+    <hr>
+    <div class="encrypter">
+      <h2>Ecrypt Any text!!</h2>
+      <textarea id="originalText" name="name" rows="8" cols="80" placeholder="Type text you want to encrypt here."></textarea><br>
+      <button type="button" ng-click="Pcontroller.encrypt()" name="button">Encrypt</button>
+      <button type="button" ng-click="Pcontroller.decrypt()" name="button">Decrypt</button>
+      <p id="encrypted-text"></p>
+    </div>
+
+  </div>
+</section>
